@@ -12,11 +12,10 @@
 
 示例(jpg)：
 
-![p2](http://i4.piimg.com/1949/b916e7ff65f1243a.png)
+![p2](http://i4.piimg.com/1949/624ce41167c685b9.png)
 
-![p3](http://i4.piimg.com/1949/3f5eec7ce16bc287.png)
+![p3](http://i4.piimg.com/1949/eca03e4f956cd783.png)
 
-![p4](http://i4.piimg.com/1949/b90d0c0257e05f7e.png)
 
 
 
