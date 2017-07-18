@@ -2,15 +2,23 @@
 
 这是仿照好奇心日报的资讯App界面，包括：
 
--主界面
+- 主界面
 
--文章详情页
+- 文章详情页
 
 示例(gif)：
 
 ![p1](http://i4.piimg.com/1949/f29ac3bf983bcbae.gif)
 
-![p2](http://i4.piimg.com/1949/0d2ee58d8bff2f3e.gif)
+示例(jpg)：
+
+![p2](http://i4.piimg.com/1949/b916e7ff65f1243a.png)
+
+![p3](http://i4.piimg.com/1949/3f5eec7ce16bc287.png)
+
+![p4](http://i4.piimg.com/1949/b90d0c0257e05f7e.png)
+
+
 
 ## 如何开始
 
@@ -19,16 +27,20 @@
 ## 两种下拉刷新模式
 
 ### 双webview模式（默认）
+
 App入口：listview_pullRefreshMain.html
+
 功能文件：listview_pullRefreshMain.html , listview_pullRefreshSub.html
 
 ### 单webview模式
+
 App入口：listview.html
+
 功能文件：listview.html
 
 ## 贡献
 
-欢迎提pr
+欢迎 pull requests .
 
 ## 致谢
 
