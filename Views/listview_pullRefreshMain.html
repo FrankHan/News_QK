@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>列表到详情最佳实践</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+
+
+		<script src="../js/mui.min.js"></script>
+		<script src="vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var lastId = ''; //最新新闻的id
+			var webview_detail = null; //详情页webview
+			var titleNView = { //详情页原生导航配置
+				backgroundColor: '#f7f7f7', //导航栏背景色
+//				backgroundColor: '#fff', //导航栏背景色
+				titleText: '', //导航栏标题
+				titleColor: '#000000', //文字颜色
+				type: 'transparent', //透明渐变样式  
+				autoBackButton: true, //自动绘制返回箭头
+				splitLine: { //底部分割线
+					color: '#cccccc'
+				}
+			}
+
+			//mui初始化，配置下拉刷新
+			mui.init({
+				statusBarBackground: '#f7f7f7',//更改状态栏颜色状态栏背景色
+				subpages:[{
+					url:'listview_pullRefreshSub.html',
+					id:'listview_pullRefreshSub.html',
+					styles:{
+						top: '0px',
+						bottom: '0px',
+					}
+				}]
+
+			});
+
+
+		</script>
+		
+
+		
+	</body>
+
+</html>

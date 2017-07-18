@@ -1,0 +1,260 @@
+
+.bgcolor-white{
+	background-color:white;
+}
+
+
+.mui-bar-nav {
+	background-color: #4a82d1;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.mui-bar-nav a,
+.mui-bar .mui-btn-link {
+	color: white;
+}
+.kr-title {
+	color: white;
+}
+
+.kr-article .kr-slider a {
+	height: 180px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+/*无需重复显示大图*/
+#kr-article-article img.fr-fin.fr-dib.fr-tag{
+	display: none;
+}
+
+#kr-article-article p img:first-child{
+	display: none;
+}
+
+.kr-article .kr-slider a .mui-slider-title {
+	background: transparent;
+	color: white;
+	opacity: 1;
+	bottom: 15px;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 0 15px;
+	white-space: normal;
+	line-height: 22px;
+	word-break: break-all;
+	height: 44px;
+	text-align: justify;
+	text-indent: 0;
+	z-index: 1;
+}
+.kr-article .kr-table-view .mui-table-view-cell {
+	padding: 11px;
+}
+.kr-article .kr-table-view .mui-table-view-cell>a:not(.mui-btn) {
+	margin: -11px;
+}
+.kr-article .kr-table-view .mui-media-object {
+	max-width: 90px;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	overflow: hidden;
+}
+.kr-article .kr-table-view .mui-media-object img {
+	height: 90px;
+}
+.kr-article .kr-table-view .mui-media-body {
+	position: relative;
+	font-size: 14px;
+	white-space: normal;
+	height: 90px;
+}
+
+.kr-article-banner {
+	height: 180px;
+	position: relative;
+	overflow: hidden;
+}
+.kr-article-cover {
+	background-position: center;
+	background-color: #ccc;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 180px;
+	position: relative;
+}
+.kr-article-cover img {
+	width: 100%;
+}
+.kr-article-bar a {
+	color: gray;
+}
+
+
+/*文章标题*/
+.kr-article-title {
+	/*position: absolute;*/
+	position: relative;
+	left: 15px;
+	/*bottom: 15px;*/
+	width: 90%;
+	/*font-weight: 400;*/
+	/*line-height: 21px;*/
+	line-height: 1.5;
+	color: black;
+	/*z-index: 11;*/
+	padding: 14px 0 0px;
+    font-size: 24px;
+    font-weight: bold;
+    /*background-color: white;*/
+}
+
+/*文字背景色*/
+.kr-article-content {
+	background: white;
+	/*background: #efeff4;*/
+}
+.kr-article-meta {
+	padding: 10px 0 10px 20px;
+	display: table;
+	/*float 控制居于左右*/
+	/*float:right;*/
+	/*text-align: right;*/
+	
+}
+.kr-article-meta div {
+	height: 30px;
+	font-size: 15px;
+	display: table-cell;
+	vertical-align:middle;
+	/*text-align: right;*/
+	color: gray;
+	padding: 0 5px;
+}
+
+/*作者头像，圆形裁剪*/
+.kr-article-avatar img {
+	width: 30px;
+	border-radius: 50%;
+}
+
+/*下面就是 发表于 三个字的样式*/
+.kr-article-text {
+	font-size: 13px!important;
+	/*font-size: 18px!important;*/
+	/*letter-spacing: normal;*/
+    /*line-height: 28px;*/
+   
+}
+
+/*作者和发表时间*/
+.kr-article-author{
+	font-weight: 600;
+	/*margin-right:3px;*/
+	/*right:3px;*/
+}
+.kr-article-time {
+	font-weight: 600;
+	/*margin-right:3px;*/
+	/*right:3px;*/
+}
+
+
+/*下面是正文的样式 */
+.kr-article-article {
+	font-size: 15px;
+	padding: 0 15px;
+	color: #000;
+	
+}
+
+/*ol是 有序列表 上右下左*/
+.kr-article-article ol {
+	margin: 0 0 0 20px;
+	/*margin: 0 0 0 0px;*/
+	padding: 0;
+}
+
+
+.kr-article-article p {
+	/*color: #000;*/
+	/*font-size: 15px;*/
+	/*line-height: 23px;*/
+	font-size: 18px!important;
+	letter-spacing: normal;
+    line-height: 28px;
+    /*margin-bottom: 20px; */
+    margin-top: 20px;
+    word-break: break-word;
+    color: #4e5257;
+    font-family: Arial,STHeiti,华文黑体,Microsoft YaHei,微软雅黑,SimSun,宋体,Helvetica,Tahoma,Arial sans-serif;
+}
+
+/*get到的正文里面的h3元素上下间距调整*/
+.kr-article-article h3,h2,h1,h4,h5,h6{
+	margin-top: 10px;
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+
+
+
+
+.kr-article-article img,
+.kr-article-article iframe {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+.kr-article-article iframe {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+/*正文样式结束*/
+
+embed,object{
+	display: none;
+}
+.kr-article-content {}
+.kr-browser .mui-bar .mui-btn {
+	top: 10px;
+	padding: 2px 12px 2px;
+}
+.kr-browser-bar .mui-spinner {
+	width: 20px;
+	height: 20px;
+}
+.kr-browser-bar a {
+	color: gray;
+}
+
+/*一句话摘要 必须放在kr-article-article的后面*/
+.kr-article-summary-special {
+	text-align: center;
+}
+
+.kr-article-summary-special p {
+	color:grey;
+	margin-top: 6px;
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+/*一句话摘要样式定义结束*/
+
+
+/*摘要下面的分割线*/
+.demo_line_01{
+    padding: 0 20px 0;
+    margin: 20px 0;
+    line-height: 2px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    color:#000000;
+}

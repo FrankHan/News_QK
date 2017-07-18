@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="list-to-detail.css" />
+	</head>
+
+	<body>
+
+		<div class="mui-content bgcolor-white">
+			<!--顶部banner图 开始-->
+			<div id="kr-article-banner" class="kr-article-banner">
+				<div id="kr-article-cover" class="kr-article-cover">
+					<img :src="cover">
+				</div>
+				<!--<h2 id="kr-article-title" class="kr-article-title">{{title}}</h2>-->
+			</div>
+			<!--顶部banner图 结束-->
+			
+			<h2 id="kr-article-title" class="kr-article-title">{{title}}</h2>
+			
+
+				
+			<div class="kr-article-content">
+				<!-- 文章作者、发布时间等信息 -->
+				<div class="kr-article-meta">
+					
+					<!--加上作者 avatar-->
+					<div id="kr-article-avatar" class="kr-article-avatar">
+						<img :src="avatar">
+					</div>
+					
+					<div id="kr-article-author" class="kr-article-author">{{author}}</div>
+					<!--<div class="kr-article-text">发表于</div>-->
+					<div id="kr-article-time" class="kr-article-time">{{time}}</div>
+				</div>
+				
+				
+				<!--测试：加上一句话摘要-->
+				<div id="kr-article-summary" class="kr-article-article kr-article-summary-special ">
+					<p>{{summary}}</p>
+					<span class="demo_line_01"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+				</div>
+
+
+				
+				<!--文章详细内容-->
+				<div id="kr-article-article" class="kr-article-article" v-html="content"></div>
+			</div>
+		</div>
+
+
+
+		<script src="../js/mui.min.js"></script>
+		<script src="vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+
+
+			function getDefaultData() {
+				return {
+					cover: '',
+					title: '',
+					author: '',
+					avatar: '',
+					summary: '',
+					time: '',
+					content: ''
+				}
+			}
+
+			var vm = new Vue({
+				el: '.mui-content',
+				data: getDefaultData(),
+				methods: {
+					resetData: function() {//重置数据
+						Object.assign(this.$data, getDefaultData());
+					}
+				}
+			});
+
+			//监听自定义事件，获取新闻详情
+			// 从首页的mui.fire传入的文章的guid等值
+			document.addEventListener('get_detail', function(event) {
+				var guid = event.detail.guid;
+				if(!guid) {
+					return;
+				}
+				//前页传入的数据，直接渲染，无需等待ajax请求详情后
+				vm.cover = event.detail.cover;
+				vm.title = event.detail.title;
+				vm.author = event.detail.author;
+				vm.time = event.detail.time;
+				//向服务端请求文章详情内容
+				mui.ajax('http://spider.dcloud.net.cn/api/news/36kr/' + guid, {
+					type:'GET',
+					dataType: 'json', //服务器返回json格式数据
+					timeout: 15000, //15秒超时
+					success: function(rsp) {
+						vm.content = rsp.content;
+						vm.avatar = rsp.author_avatar;//avatar在此
+						vm.summary = rsp.summary;
+					},
+					error: function(xhr, type, errorThrown) {
+						mui.toast('获取文章内容失败');
+						//TODO 此处可以向服务端告警
+					}
+				});
+			});
+
+			//重写返回逻辑
+			mui.back = function() {
+				plus.webview.currentWebview().hide("auto", 300);
+				//动画结束后，恢复默认值
+				setTimeout(function() {
+					window.scrollTo(0, 0);
+					vm.resetData();
+				}, 300);
+			}
+		</script>
+		
+		
+
+
+
+
+	
+
+		<script type="text/javascript">
+			mui.plusReady(function() {
+
+				var ws1 = plus.webview.currentWebview();
+			//	console.log("webview" + plus.webview.all().length + ":" + ws1.id);		// 当前webview：news_detail
+				var nb = ws1.getTitleNView();
+			//	nb.drawText('返回', {'top':'0px','left':'0px','width':'96px','height':'100%'});
+				nb.hide(); //在这一步隐藏导航栏成功
+			//	nb.show(); //调用这一句则重新出现导航栏
+				plus.navigator.setFullscreen(true);	// 隐藏状态栏
+				
+				document.addEventListener("swipeup", function() {
+					console.log("详情页：上滑隐藏");					
+//					nb.hide();	//隐藏导航栏
+					plus.navigator.setFullscreen(true);	// 隐藏状态栏
+				})
+		
+				document.addEventListener("swipedown", function() {
+					console.log("详情页：下滑显示");
+//					nb.show(); //显示导航栏
+//					plus.navigator.setFullscreen(false); // 显示状态栏
+				})		
+			})
+			
+
+		</script>
+	</body>
+
+</html>
