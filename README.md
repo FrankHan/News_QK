@@ -6,11 +6,11 @@
 
 ## 两种下拉刷新模式
 
-# 双webview模式（默认）：
+### 双webview模式（默认）
 App入口：listview_pullRefreshMain.html
 功能文件：listview_pullRefreshMain.html , listview_pullRefreshSub.html
 
-# 单webview模式：
+### 单webview模式
 App入口：listview.html
 功能文件：listview.html
 
@@ -21,7 +21,7 @@ App入口：listview.html
 ## 致谢
 
 - MUI框架
-- Hello MUI App的"从列表到内容最佳实践"
+- Hello MUI App: "从列表到内容最佳实践"
 
 ## 开源协议
 
