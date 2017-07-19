@@ -1,6 +1,6 @@
 ## 这是什么
 
-这是仿照好奇心日报的资讯App界面，包括：
+这是一个高可复用的资讯App外观界面，包括：
 
 - 主界面
 
@@ -10,11 +10,13 @@
 
 ![p1](http://i4.piimg.com/1949/f29ac3bf983bcbae.gif)
 
-示例(jpg)：
+首页(jpg)：
 
-![p2](http://i4.piimg.com/1949/624ce41167c685b9.png)
+![p2](http://ooi79olia.bkt.clouddn.com/news_qk_1.PNG)
 
-![p3](http://i4.piimg.com/1949/eca03e4f956cd783.png)
+文章详情页(jpg)：
+
+![p3](http://ooi79olia.bkt.clouddn.com/news_qk_4.PNG)
 
 
 
@@ -27,15 +29,15 @@
 
 ### 双webview模式（默认）
 
-App入口：listview_pullRefreshMain.html
+App入口：Views/listview_pullRefreshMain.html
 
-功能文件：listview_pullRefreshMain.html , listview_pullRefreshSub.html
+功能文件：Views/listview_pullRefreshMain.html , Views/listview_pullRefreshSub.html
 
 ### 单webview模式
 
-App入口：listview.html
+App入口：Views/listview.html
 
-功能文件：listview.html
+功能文件：Views/listview.html
 
 ## 贡献
 
@@ -43,8 +45,8 @@ App入口：listview.html
 
 ## 致谢
 
-- MUI框架
-- Hello MUI App: "从列表到内容最佳实践"
+- [MUI框架](http://dev.dcloud.net.cn/mui/)
+- Hello MUI App: "从列表到详情最佳实践"
 
 ## 开源协议
 
