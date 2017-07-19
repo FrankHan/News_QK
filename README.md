@@ -8,7 +8,7 @@
 
 示例(gif)：
 
-![p1](http://i4.piimg.com/1949/f29ac3bf983bcbae.gif)
+![p1](http://ooi79olia.bkt.clouddn.com/news_qk_3.gif)
 
 首页(jpg)：
 
